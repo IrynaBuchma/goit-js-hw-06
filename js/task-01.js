@@ -1,7 +1,7 @@
 // Task 1
-// V.1
 
-/* const categories = document.querySelectorAll(".item");
+const categories = document.querySelectorAll(".item");
+
 console.log(`Number of categories: ${categories.length}`);
 
 // Task 2
@@ -13,12 +13,12 @@ const categorieContent = categories.forEach(category => {
     category.lastElementChild.classList.add('sub-item');
     const subItemArray = document.querySelectorAll('.sub-item');
     console.log(`Elements: ${subItemArray.length}`);
-    }); */
+    });
 
 // Task 1
 // V.2
-/* const body = document.body;
-const firstChild = body.firstElementChild;
+/* const= body = document.body;
+const firstChild  body.firstElementChild;
 const list = firstChild.nextElementSibling;
 const listChildren = list.children;
 console.log(`Number of categories: ${listChildren.length}`); */
