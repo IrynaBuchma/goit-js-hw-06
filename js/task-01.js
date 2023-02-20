@@ -10,8 +10,7 @@ const categorieContent = categories.forEach(category => {
 
     console.log(`Category: ${category.firstElementChild.textContent}`);
 
-    category.lastElementChild.classList.add('sub-item');
-    const subItemArray = document.querySelectorAll('.sub-item');
+    const subItemArray = category.querySelectorAll('li');
     console.log(`Elements: ${subItemArray.length}`);
     });
 

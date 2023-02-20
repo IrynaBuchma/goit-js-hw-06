@@ -13,7 +13,38 @@ const images = [
   },
 ];
 
-const ulRef = document.querySelector('.gallery');
+const gallery = document.querySelector(".gallery");
+      gallery.style.display = 'flex';
+      gallery.style.justifyContent = 'space-around';
+      gallery.style.flexWrap = 'wrap';
+      gallery.style.gap = '50px';
+      gallery.style.padding = '15px';
+
+const setupImages = images.map(({ url, alt }) =>
+
+  `<li><img src="${url}" alt="${alt}"></li>`).join("");
+  
+gallery.insertAdjacentHTML("beforeend", setupImages);
+
+const galleryLiRef = gallery.querySelectorAll('li');
+
+      const addLiStyle = galleryLiRef.forEach(item => {
+
+            item.style.listStyle = 'none';
+            item.style.display = 'flex';
+            item.style.padding = '0px', '20px';
+      });
+      
+const imgLiRef = gallery.querySelectorAll('img'); 
+
+    const addImgStyle = imgLiRef.forEach(item => {
+
+      item.width = 200;
+    });
+
+
+// Перший розв'язок не по ТЗ
+/* const ulRef = document.querySelector('.gallery');
 
       ulRef.style.display = 'flex';
       ulRef.style.justifyContent = 'space-around';
@@ -43,5 +74,5 @@ const imagesGallery = images.map(image => {
   return galleryLiRef;
 });
 
-ulRef.append(...imagesGallery);
+ulRef.append(...imagesGallery); */
 
