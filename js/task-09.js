@@ -5,6 +5,7 @@ const body = document.body;
 const span = document.querySelector('.color');
 const btnColorCange = document.querySelector('.change-color');
 
+
 btnColorCange.addEventListener('click', onColorChange);
 
 function onColorChange(e) {
@@ -12,6 +13,6 @@ function onColorChange(e) {
   e.currentTarget === btnColorCange;
 
     body.style.backgroundColor = getRandomHexColor();
-    span.textContent = getRandomHexColor();
+    span.textContent = body.style.backgroundColor;
     return;
   };
